@@ -14,8 +14,9 @@ Text Domain:  accelerate-theme-child
 /* To Do
 expand case-study images to fill figure; they are at 100% of img
 look at the float: left to see if that is what's causing the shift over
-
-
+Case Studies - add caret to back links using the_excerpt();
+navigation font should be lighter weight
+add social media symbols to footer and align right
  */
 
 /* HOMEPAGE STYLES */
@@ -73,6 +74,8 @@ look at the float: left to see if that is what's causing the shift over
   font-weight: 400;
 }
 
+
+
 @media screen and (min-width: 40em) {
 
     .individual-featured-work {
@@ -107,24 +110,29 @@ look at the float: left to see if that is what's causing the shift over
 /* Case Studies */
 .case-study {
   display: flex;
+  justify-content: space-between;
 }
 
 aside.case-study-sidebar {
   width: 30%;
-  margin: 0 10px;
+  /* margin: 0 10px; */
+  margin: 0;
 }
 
 div.case-study-images {
   display: flex;
   flex-direction: column;
   width: 60%;
-  margin: 0 20px;
+  /* margin: 0 20px; */
+  margin: 0;
 }
 
 div.case-study-images img {
   display: block;
   margin-bottom: 50px;
   border: 1px solid #dddddd;
+  width: 100%;
+  height: auto;
 }
 
 .back-nav {
@@ -137,5 +145,26 @@ div.case-study-images img {
   height: 1em;
   text-transform: uppercase;
 }
+
+.case-study h2 {
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.case-study h4 {
+  font-weight: 100;
+  font-size: .75em;
+  color: #a6a6a6;
+  margin-top: 0;
+}
+
+#client {
+  color: black;
+}
+
+/* Case Studies Archive Page */
+
+
+
 
 /* End Case Studies */
