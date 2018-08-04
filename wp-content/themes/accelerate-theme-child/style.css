@@ -10,6 +10,14 @@ Tags:     	light, dark, two-columns, right-sidebar, responsive-layout, accessibi
 Text Domain:  accelerate-theme-child
 */
 
+
+/* To Do
+expand case-study images to fill figure; they are at 100% of img
+look at the float: left to see if that is what's causing the shift over
+
+
+ */
+
 /* HOMEPAGE STYLES */
 .home-page {
     background: url("img/taxi-photo.jpg") no-repeat scroll right center / cover rgba(0, 0, 0, 0);
@@ -28,7 +36,7 @@ Text Domain:  accelerate-theme-child
 
 .blog-post h4 {
     font: 700 1em/1.75 'Montserrat', 'Open Sans', Arial, sans-serif;
-    color: #a6a66;
+    color: #a6a6a6;
     text-transform: uppercase;
     margin: 2em 0 .5em;
 }
@@ -43,6 +51,47 @@ Text Domain:  accelerate-theme-child
     color: #45ac9d;
     text-transform: uppercase;
 }
+
+.featured-work {
+    width: 100%;
+}
+
+.featured-work h4 {
+  text-align: center;
+  margin: -2em 0 2em;
+}
+.homepage-featured-work {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.individual-featured-work h4 {
+  margin-top: 1em;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 40em) {
+
+    .individual-featured-work {
+        display: flex;
+        flex-direction: column;
+        flex: 0 1 calc(50% - .5em);
+        margin-bottom: 1em;
+    }
+}
+
+@media screen and (min-width: 60em) {
+
+    .individual-featured-work {
+        flex: 0 1 calc(33% - 1em);
+        margin-bottom: 2em;
+    }
+}
+
+
 
 /* End HOMEPAGE STYLES */
 
