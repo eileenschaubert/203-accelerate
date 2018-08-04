@@ -1,0 +1,7 @@
+[29-Jul-2018 01:42:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_field() in /Users/eileenschaubert/Documents/Sites/203-accelerate/wp-content/themes/accelerate-theme-child/single-case_studies.php:42
+Stack trace:
+#0 /Users/eileenschaubert/Documents/Sites/203-accelerate/wp-includes/template-loader.php(74): include()
+#1 /Users/eileenschaubert/Documents/Sites/203-accelerate/wp-blog-header.php(19): require_once('/Users/eileensc...')
+#2 /Users/eileenschaubert/Documents/Sites/203-accelerate/index.php(17): require('/Users/eileensc...')
+#3 {main}
+  thrown in /Users/eileenschaubert/Documents/Sites/203-accelerate/wp-content/themes/accelerate-theme-child/single-case_studies.php on line 42
