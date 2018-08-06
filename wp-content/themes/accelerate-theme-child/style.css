@@ -168,3 +168,35 @@ div.case-study-images img {
 
 
 /* End Case Studies */
+
+/* Footer and Social Media Links */
+.social-media-navigation {
+  /* background-color: red; */
+}
+
+.social-media-menu {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.social-media-menu li {
+  color: white;
+  background-color: gray;
+  padding: .5em;
+  border-radius: 50%;
+  height: 2em;
+  width: 2em;
+  margin: .25em;
+}
+
+i._mi.dashicons {
+  color: white;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: center;
+}
+
+/* End Footer and Social Media Links */
