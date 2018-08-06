@@ -17,6 +17,14 @@ function accelerate_child_scripts(){
 }
 add_action( 'wp_enqueue_scripts', 'accelerate_child_scripts' );
 
+// Enqueue font awesome for icons via CDN
+function custom_load_font_awesome() {
+    wp_enqueue_style( 'font-awesome-free', 'https://use.fontawesome.com/releases/v5.2.0/css/all.css' );
+}
+add_action( 'wp_enqueue_scripts', 'custom_load_font_awesome' );
+
+
+
 // Add a custom post type for case studies
 function create_custom_post_types() {
     register_post_type( 'case_studies',
