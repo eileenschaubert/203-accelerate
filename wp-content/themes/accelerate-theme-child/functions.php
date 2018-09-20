@@ -24,9 +24,9 @@ function custom_load_font_awesome() {
 add_action( 'wp_enqueue_scripts', 'custom_load_font_awesome' );
 
 
-
-// Add a custom post type for case studies
+// Custom post types function
 function create_custom_post_types() {
+	// Add a custom post type for case studies
     register_post_type( 'case_studies',
         array(
             'labels' => array(
@@ -38,5 +38,18 @@ function create_custom_post_types() {
             'rewrite' => array( 'slug' => 'case-studies' ),
         )
     );
+		// Add a custom post type for services listed on the about page
+		register_post_type( 'services_offered',
+        array(
+            'labels' => array(
+                'name' => __( 'Services' ),
+                'singular_name' => __( 'Service' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array( 'slug' => 'services' ),
+        )
+    );
+
 }
 add_action( 'init', 'create_custom_post_types' );

@@ -230,3 +230,27 @@ change fonts to match
 #nf-field-3 {
   font-size: 18px;
 }
+
+
+/* About page
+Modify php file for the services offered
+*/
+.service-name {
+  display: flex;
+  justify-content: space-between;
+}
+
+aside.services-sidebar {
+  width: 60%;
+  /* margin: 0 10px; */
+  margin: 0;
+}
+
+
+div.service-images {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  /* margin: 0 20px; */
+  margin: 0;
+}
