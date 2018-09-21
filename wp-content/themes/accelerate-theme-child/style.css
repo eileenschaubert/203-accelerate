@@ -234,23 +234,75 @@ change fonts to match
 
 /* About page
 Modify php file for the services offered
+center the intro text and adjust fonts.
+resize the logos.
+horizontally align the text at 2/3 and logo at 1/3
+change list items to have no dots (it's calling the main style sheet)
 */
-.service-name {
+
+.our-services {
+  width: 100%;
+}
+
+.our-services h4 {
+  text-align: center;
+  margin: -2em 0 .5em;
+}
+
+.about-content p {
+  margin: 0;
+  text-align: center;
+}
+
+/* .service-name {
   display: flex;
   justify-content: space-between;
-}
+} */
 
-aside.services-sidebar {
+/* aside.services-sidebar {
   width: 60%;
   /* margin: 0 10px; */
-  margin: 0;
-}
+  /* margin: 0;
+} */ */
 
 
-div.service-images {
-  display: flex;
-  flex-direction: column;
+.service-images {
+  /* display: flex;
+  flex-direction: column; */
   width: 30%;
   /* margin: 0 20px; */
   margin: 0;
+}
+
+.aboutpage-services {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.individual-services {
+  display: flex;
+  width: 100%;
+  background-color: red;
+}
+
+.individual-services h4 {
+  margin-top: 1em;
+  font-weight: 800;
+}
+
+#secondary h3 {
+  width: 60%;
+  margin: auto;
+}
+
+
+#secondary.site-content {
+  width: 50%;
+  max-width: 960px;
+  margin: 0 auto;
+  font-weight: 100;
+  font-size: 1em;
 }

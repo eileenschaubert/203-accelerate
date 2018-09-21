@@ -15,14 +15,13 @@ get_header(); ?>
 
 
 <?php while ( have_posts() ) : the_post();
-		$services = get_field('services');
+		$services = get_field('service_offering');
 		$image_1 = get_field('logo_for_service');
 		$size = "full"; ?>
 
 		<article class="service-name">
 			<aside class="services-sidebar">
 				<h2><?php the_title(); ?></h2>
-				<h4><?php echo $services; ?></h4>
 
 				<?php the_content(); ?>
 

@@ -1,0 +1,56 @@
+<?php
+/**
+ * The template for displaying the about page
+ *
+ * This is a modified template from the front-page template.
+ * Please note that this is the WordPress construct of pages
+ * and that other 'pages' on your WordPress site will use a
+ * different template.
+ *
+ * @package WordPress
+ * @subpackage Accelerate Marketing
+ * @since Accelerate Marketing 2.0
+ */
+
+get_header(); ?>
+
+	<div id=secondary class="home-page hero-content">
+		<div class="main-content">
+			<?php while ( have_posts() ) : the_post(); ?>
+				<?php the_content(); ?>
+			<?php endwhile; // end of the loop. ?>
+		</div><!-- .main-content -->
+	</div><!-- #primary -->
+
+	<section class="our-services">
+		<div class="site-content about-content">
+			<h4>OUR SERVICES</h4>
+			<p>We take pride in our clients and the content we create for them.</p>
+			<p>Here’s a brief overview of our offered services.</p>
+			<ul class="aboutpage-services">
+
+			<?php query_posts('posts_per_page=4&post_type=services_offered'); ?>
+				<?php while (have_posts() ) : the_post();
+					$image_1 = get_field("logo_for_service");
+					$size = "large";
+				?>
+					<li class="individual-services">
+						<figure class="service-images">
+							<a href="<?php the_permalink(); ?>">
+								<?php echo wp_get_attachment_image($image_1, $size); ?>
+							</a>
+						</figure>
+						<div class="services-text">
+							<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+							<p><?php the_content(); ?></p>
+						</div>
+					</li>
+				<?php endwhile; ?>
+			<?php wp_reset_query(); ?> <!-- resets the altered query back to the original -->
+			</ul>
+
+		</div>
+	</section>
+
+
+<?php get_footer(); ?>
