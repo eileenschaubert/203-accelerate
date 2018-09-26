@@ -17,6 +17,9 @@ look at the float: left to see if that is what's causing the shift over
 Case Studies - add caret to back links using the_excerpt();
 navigation font should be lighter weight
 add social media symbols to footer and align right
+remove sidebar from blog archive page
+edit fonts, add image on 404 page
+go through and polish the site for GitHub
  */
 
 /* HOMEPAGE STYLES */
@@ -309,3 +312,21 @@ change fonts to match
 }
 
 /* End About page */
+
+/* 404 page */
+
+.four-oh-four .main-content {
+  width: 70%;
+  margin: auto;
+}
+
+.four-oh-four a {
+  color: #45ac9d;
+}
+
+.four-oh-four h2 {
+  font-family: 'Londrina Solid', 'Montserrat', 'Open Sans', Arial, sans-serif;
+
+}
+
+/* End 404 page */
