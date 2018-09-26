@@ -27,6 +27,7 @@ get_header(); ?>
 			<h4>OUR SERVICES</h4>
 			<p>We take pride in our clients and the content we create for them.</p>
 			<p>Here’s a brief overview of our offered services.</p>
+
 			<ul class="aboutpage-services">
 
 			<?php query_posts('posts_per_page=4&post_type=services_offered'); ?>
@@ -36,12 +37,10 @@ get_header(); ?>
 				?>
 					<li class="individual-services">
 						<figure class="service-images">
-							<a href="<?php the_permalink(); ?>">
 								<?php echo wp_get_attachment_image($image_1, $size); ?>
-							</a>
 						</figure>
 						<div class="services-text">
-							<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+							<h2><?php the_title(); ?></h2>
 							<p><?php the_content(); ?></p>
 						</div>
 					</li>
