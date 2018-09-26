@@ -22,7 +22,7 @@ add social media symbols to footer and align right
 /* HOMEPAGE STYLES */
 .home-page {
     background: url("img/taxi-photo.jpg") no-repeat scroll right center / cover rgba(0, 0, 0, 0);
-	text-align: center;
+	  text-align: center;
 }
 
 .button {
@@ -58,23 +58,21 @@ add social media symbols to footer and align right
 }
 
 .featured-work h4 {
-  text-align: center;
-  margin: -2em 0 2em;
+    text-align: center;
+    margin: -2em 0 2em;
 }
 .homepage-featured-work {
-  list-style: none;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .individual-featured-work h4 {
-  margin-top: 1em;
-  font-weight: 400;
+    margin-top: 1em;
+    font-weight: 400;
 }
-
-
 
 @media screen and (min-width: 40em) {
 
@@ -93,8 +91,6 @@ add social media symbols to footer and align right
         margin-bottom: 2em;
     }
 }
-
-
 
 /* End HOMEPAGE STYLES */
 
@@ -115,7 +111,6 @@ add social media symbols to footer and align right
 
 aside.case-study-sidebar {
   width: 30%;
-  /* margin: 0 10px; */
   margin: 0;
 }
 
@@ -123,7 +118,6 @@ div.case-study-images {
   display: flex;
   flex-direction: column;
   width: 60%;
-  /* margin: 0 20px; */
   margin: 0;
 }
 
@@ -163,16 +157,9 @@ div.case-study-images img {
 }
 
 /* Case Studies Archive Page */
-
-
-
-
 /* End Case Studies */
 
 /* Footer and Social Media Links */
-.social-media-navigation {
-  /* background-color: red; */
-}
 
 .social-media-menu {
   list-style: none;
@@ -198,7 +185,6 @@ i._mi.dashicons {
   display: flex;
   justify-content: center;
 }
-
 /* End Footer and Social Media Links */
 
 /* Contact Us
@@ -218,13 +204,13 @@ change fonts to match
 }
 
 #nf-label-field-1 {
-        font-weight: 300;
+  font-weight: 300;
 }
 #nf-label-field-2 {
-        font-weight: 300;
+  font-weight: 300;
 }
  #nf-label-field-3 {
-        font-weight: 300;
+  font-weight: 300;
 }
 
 #nf-field-3 {
@@ -232,10 +218,7 @@ change fonts to match
 }
 /* End Contact Us */
 
-/* About page
-Add "Interested..." and Contact button
-*/
-
+/* About page */
 #secondary h3 {
   width: 60%;
   margin: auto;
@@ -277,13 +260,14 @@ Add "Interested..." and Contact button
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  padding: 1em;
+  margin: 2em 0;
 }
 
 .individual-services h2 {
   font-size: 1.5em;
   font-weight: 500;
   text-align: left;
+  margin: .5em 0;
 }
 
 .service-images {
@@ -305,6 +289,23 @@ Add "Interested..." and Contact button
 
 .individual-services:nth-of-type(even) {
   flex-direction: row-reverse;
+}
+
+.about-cta {
+  border-top: 1px solid #bfbfbf;
+  padding: 1em 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.about-cta h2 {
+  margin: 2em 0 0;
+  padding-right: 1em;
+}
+
+.about-cta .button {
+  font-size: 1.25em
 }
 
 /* End About page */

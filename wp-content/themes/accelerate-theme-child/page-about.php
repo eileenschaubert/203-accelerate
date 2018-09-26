@@ -51,5 +51,10 @@ get_header(); ?>
 		</div>
 	</section>
 
+	<div class="about-cta site-content">
+		<h2>Interested in Working With Us?</h2>
+		<a class="button" href="<?php echo site_url('/contact-us/') ?>">Contact Us</a>
+	</div><!-- link back to case study page -->
+
 
 <?php get_footer(); ?>
