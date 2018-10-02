@@ -14,7 +14,7 @@
 
 get_header(); ?>
 
-	<div id=secondary class="home-page hero-content">
+	<div id=about-primary class="home-page hero-content">
 		<div class="main-content">
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php the_content(); ?>

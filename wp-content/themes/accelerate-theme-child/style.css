@@ -20,6 +20,8 @@ add social media symbols to footer and align right
 remove sidebar from blog archive page
 edit fonts, add image on 404 page
 go through and polish the site for GitHub
+fix the social media button display on individual blog posts (too many so they overlap)
+probably need a different social media plugin
  */
 
 /* HOMEPAGE STYLES */
@@ -77,6 +79,31 @@ go through and polish the site for GitHub
     font-weight: 400;
 }
 
+#secondary {
+    width: 50%;
+    float: right;
+    padding-left: 40px;
+}
+
+#secondary ul {
+    list-style: none;
+    margin: 1em 0;
+}
+
+.widget-area h4 {
+    font: 700 1em/1.75 'Montserrat', 'Open Sans', Arial, sans-serif;
+    color: #a6a6a6;
+    text-transform: uppercase;
+    margin: 2em 0 .5em;
+}
+
+.widget-title {
+  font-size: 1.5em;
+}
+
+#secondary .stt-em {
+    display: none;
+}
 @media screen and (min-width: 40em) {
 
     .individual-featured-work {
@@ -222,12 +249,12 @@ change fonts to match
 /* End Contact Us */
 
 /* About page */
-#secondary h3 {
+#about-primary h3 {
   width: 60%;
   margin: auto;
 }
 
-#secondary.site-content {
+#about-primary.site-content {
   width: 50%;
   max-width: 960px;
   margin: 0 auto;
@@ -312,6 +339,15 @@ change fonts to match
 }
 
 /* End About page */
+
+/* Blog Page */
+
+input[type="submit"] {
+  background: #45ac9d;
+}
+
+
+/* End Blog Page */
 
 /* 404 page */
 
