@@ -55,7 +55,7 @@ get_header(); ?>
 
 
 	 <div>
-	 		<h2 class="back-nav"><a href="../">Back to Work</a></h2>
+	 		<h2 class="back-nav"><i class="fas fa-long-arrow-alt-left"></i><a href="../"> Back to Work</a></h2>
 	 </div><!-- link back to case study page -->
 
 

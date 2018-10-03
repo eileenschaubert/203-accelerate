@@ -13,15 +13,7 @@ Text Domain:  accelerate-theme-child
 
 /* To Do
 expand case-study images to fill figure; they are at 100% of img
-look at the float: left to see if that is what's causing the shift over
-Case Studies - add caret to back links using the_excerpt();
-navigation font should be lighter weight
-add social media symbols to footer and align right
-remove sidebar from blog archive page
 edit fonts, add image on 404 page
-go through and polish the site for GitHub
-fix the social media button display on individual blog posts (too many so they overlap)
-probably need a different social media plugin
  */
 
 /* HOMEPAGE STYLES */
@@ -162,7 +154,7 @@ div.case-study-images img {
 .back-nav {
   width: 90%;
   max-width: 960px;
-  margin: 1em auto;
+  margin: 1em auto -.5em;
   border-top: 1px solid #bfbfbf;
   color: #150300;
   font: 600 .8em/3 'Open Sans', Arial, sans-serif;
@@ -170,9 +162,14 @@ div.case-study-images img {
   text-transform: uppercase;
 }
 
+.fa-long-arrow-alt-left {
+  color: #45ac9d;
+}
+
 .case-study h2 {
   font-weight: 400;
   margin-bottom: 0;
+  line-height: 1.5;
 }
 
 .case-study h4 {
@@ -180,6 +177,7 @@ div.case-study-images img {
   font-size: .75em;
   color: #a6a6a6;
   margin-top: 0;
+  line-height: 1.5;
 }
 
 #client {
@@ -344,6 +342,7 @@ change fonts to match
 
 input[type="submit"] {
   background: #45ac9d;
+  padding-bottom: 2em;
 }
 
 
