@@ -1,29 +1,29 @@
-=== Social Sharing WordPress Plugin - Social Pug ===
+=== Social Share Buttons - Social Pug ===
 Contributors: iova.mihai
 Donate link: https://www.devpups.com/social-pug/
-Tags: social, social share, social sharing, social sharing buttons, social network, social share buttons, share buttons, share button, facebook button, pin button, share counter, social network share, floating share buttons, content share buttons, share counts, social share icon
+Tags: social share, social sharing, social sharing buttons, social share buttons, social network, share buttons, share button, social share icon, floating share buttons, share counts, social sharing icon
 Requires at least: 3.1
 Tested up to: 4.9.8
-Stable tag: 1.4.9
+Stable tag: 1.5.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Social Pug adds the best looking social sharing buttons to your website and is the only social sharing plugin you will ever need.
+The best social sharing buttons for your website and the only social sharing plugin you will ever need. Social Pug.
 
 == Description ==
-**Say Hello To The Best Looking Social Sharing Buttons**
+**The Best Looking Social Sharing Buttons**
 
 Social Pug is one of the easies to use social sharing plugin available. It let's you add highly customizable social share buttons that will integrate beautifully with your website's design, leading to increased interactions and social media shares.
 
 The free version of the plugin comes with five of the biggest social media platforms, mainly Facebook, Twitter, Google+, Pinterest and LinkedIn.
 
-For each social media platform you can customize the share button to your liking. You can choose to have a simple social media icon share button, a share button with a bold label to catch the eye and even social sharing buttons with social share counts, so that you visitors have social media proof.
+For each social media platform you can customize the social share button to your liking. You can choose to have a simple social media icon share button, a share button with a bold label to catch the eye and even social sharing buttons with social share counts, so that you visitors have social media proof.
 
 You can place the social sharing buttons before and after the post content or have them follow your readers as they scroll up and down the page, in the form of a social media floating sidebar.
 
 **Social Share Count**: Display the posts social share count **( including Twitter )** to provide social media proof and increase your website's credibility.
 
-**Social Share Buttons Locations**: You can place the share buttons in 4 different locations of your website. You can opt in to display them before and/or after the content of your posts on whichever post type you want. Also you can choose to display the buttons in a floating sidebar that follows the user as he/she scrolls the page. The floating sidebar can be placed on the left or on the right side of the screen.
+**Social Share Buttons Locations**: You can place the social sharing buttons in 4 different locations of your website. You can opt in to display them before and/or after the content of your posts on whichever post type you want. Also you can choose to display the social share buttons in a floating sidebar that follows the user as he/she scrolls the page. The floating sidebar can be placed on the left or on the right side of the screen.
 
 = Main Features =
 * **Before and After Content Social Share Buttons** - Place the social share buttons right before your content, after your content or both
@@ -71,7 +71,7 @@ We currently support Facebook, Twitter, Google+, Pinterest and LinkedIn as socia
 
 = Can I activate tweet count for my Twitter social share button? =
 
-Twitter has officially removed support for the tweet count of a URL. Luckily a third party application, namely NewShareCounts, has come to provide an alternative solution. Social Pug has partnered with NewShareCounts to provide social sharing proof for your Twitter social share button.
+Twitter has officially removed support for the tweet count of a URL. Luckily a third party application, namely OpenShareCount, has come to provide an alternative solution. Social Pug has partnered with OpenShareCount to provide social sharing proof for your Twitter social share button.
 
 = Can I customize the social information that is being shared on social media? =
 
@@ -83,20 +83,24 @@ No. Social Pug is a lightweight plugin that was built with efficiency in mind. U
 
 = Can I place the social share buttons only on posts and pages? =
 
-You can place both the inline share buttons and the floating sidebar sharing buttons on any custom post type that your WordPress installation has registered. You are not limited to only posts and pages.
+You can place both the inline social share buttons and the floating sidebar social sharing buttons on any custom post type that your WordPress installation has registered. You are not limited to only posts and pages.
 
 
 == Screenshots ==
-1. Inlin-Content Social Sharing Buttons Output
-2. Floating Sidebar Social Share Buttons Output
-3. Floating Sidebar Social Share Buttons Configuration Page
-4. Before and After Content Social Sharing Buttons Configuration Page
+1. Inline-Content social sharing buttons output
+2. Floating Sidebar social share buttons output
+3. Floating Sidebar social share buttons configuration page
+4. Before and After Content social sharing buttons configuration page
 
 
 == Changelog ==
 
+= 1.5.0 =
+* New: Add a Twitter handle to the tweet generated when clicking on the Twitter social sharing button.
+* Fixed: Issue with inline social share button labels being added to Yoast meta descriptions.
+
 = 1.4.9 =
-* New: Removed support for NewShareCounts in favor of support for OpenShareCount to retrieve Twitter social share counts
+* New: Removed support for NewShareCounts in favor of support for OpenShareCount to retrieve Twitter social share counts.
 
 = 1.4.8 =
 * Misc: Small admin user interface improvements to make the plugin more user friendly.

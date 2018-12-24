@@ -204,6 +204,18 @@ jQuery( function($) {
 
 	});
 
+	/**
+	 * Selects the edit label field from the sortable list when the admin
+	 * clicks on the edit label button
+	 *
+	 */
+	$(document).on( 'click', '.dpsp-list-edit-label', function(e) {
+
+		e.preventDefault();
+
+		$(this).closest('li').find( '.dpsp-list-input-wrapper input' ).focus().select();
+
+	});
 
 	/*
 	 * Removes the social network from the sortable list when clicking
@@ -248,8 +260,14 @@ jQuery( function($) {
 		html += '<li data-network="' + slug + '" style="display: none;">';
 			html += '<div class="dpsp-sort-handle ui-sortable-handle"><!-- --></div>';
 			html += '<div class="dpsp-list-icon dpsp-list-icon-social dpsp-icon-' + slug + '"><!-- --></div>';
-			html += '<div class="dpsp-list-input-wrapper"><input class="dpsp-transition" name="' + location + '[networks][' + slug + '][label]" value="' + name + '"><span class="dpsp-icon dpsp-icon-edit dpsp-transition"></span></div>';
-			html += '<a class="dpsp-list-remove dpsp-list-icon dpsp-icon-remove dpsp-transition" href="#"><!-- --></a>';
+			html += '<div class="dpsp-list-input-wrapper"><input class="dpsp-transition" name="' + location + '[networks][' + slug + '][label]" value="' + name + '"></div>';
+			
+			// List item actions
+			html += '<div class="dpsp-list-actions">';
+				html += '<a class="dpsp-list-edit-label dpsp-transition" href="#"><span class="dashicons dashicons-edit"></span>' + 'Edit Label' + '</a>';
+				html += '<a class="dpsp-list-remove dpsp-transition" href="#"><span class="dashicons dashicons-no-alt"></span>' + 'Remove' + '</a>';
+			html += '</div>';
+
 		html += '</li>';
 
 		$('.dpsp-social-platforms-sort-list').append( html );

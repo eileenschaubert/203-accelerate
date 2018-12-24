@@ -334,13 +334,24 @@
 			if( !empty($networks) ) {
 				foreach( $networks as $network_slug => $network ) {
 					$output .= '<li data-network="' . $network_slug . '">';
+
+						// The sort handle
 						$output .= '<div class="dpsp-sort-handle"><!-- --></div>';
+
+						// The social network icon
 						$output .= '<div class="dpsp-list-icon dpsp-list-icon-social dpsp-icon-' . $network_slug . '"><!-- --></div>';
+
+						// The label edit field
 						$output .= '<div class="dpsp-list-input-wrapper">';
-							$output .= '<input class="dpsp-transition" name="' . $settings_name . '[networks][' . $network_slug . '][label]" value="' . ( isset( $network['label'] ) ? esc_attr( $network['label'] ) : dpsp_get_network_name( $network_slug ) ) . '" />';
-							$output .= '<span class="dpsp-icon dpsp-icon-edit dpsp-transition"></span>';
+							$output .= '<input type="text" placeholder="' . __( 'This button has no label text.', 'social-pug' ) . '" name="' . $settings_name . '[networks][' . $network_slug . '][label]" value="' . ( isset( $network['label'] ) ? esc_attr( $network['label'] ) : dpsp_get_network_name( $network_slug ) ) . '" />';
 						$output .= '</div>';
-						$output .= '<a class="dpsp-list-remove dpsp-list-icon dpsp-icon-remove dpsp-transition" href="#"><!-- --></a>';
+
+						// List item actions
+						$output .= '<div class="dpsp-list-actions">';
+							$output .= '<a class="dpsp-list-edit-label" href="#"><span class="dashicons dashicons-edit"></span>' . __( 'Edit Label' ) . '</a>';
+							$output .= '<a class="dpsp-list-remove" href="#"><span class="dashicons dashicons-no-alt"></span>' . __( 'Remove' ) . '</a>';
+						$output .= '</div>';
+
 					$output .= '</li>';
 				}
 			}
@@ -450,13 +461,23 @@
 		// The Settings Sidebar
 		echo '<div class="dpsp-settings-sidebar">';
 
-			echo '<div>';
+			echo '<div id="dpsp-settings-sidebar-social-pug-pro">';
 
-				echo '<h3>' . __( 'Social Pug Pro', 'social-pug' ) . '</h3>';
+				echo '<h3>' . __( 'Upgrade to Social Pug Pro', 'social-pug' ) . '</h3>';
 
-				echo '<p>' . __( 'Unlock the full set of features to help you drive more traffic to your website.', 'social-pug' ) . '</p>';
+				echo '<p><span class="dashicons dashicons-yes"></span>' . __( 'Control what and how your users share on Pinterest, Facebook, Twitter and more.', 'social-pug' ) . '</p>';
 
-				echo '<a id="dpsp-to-premium" href="https://devpups.com/social-pug/features/?utm_source=plugin&amp;utm_medium=sidebar&amp;utm_campaign=social-pug" target="_blank"><i class="dashicons dashicons-external"></i>' . __( 'Upgrade to Pro', 'social-pug' ) . '</a>';
+				echo '<p><span class="dashicons dashicons-yes"></span>' . __( 'Add unlimited Click to Tweet boxes so that your users can share your content on Twitter with just one click.', 'social-pug' ) . '</p>';
+
+				echo '<p><span class="dashicons dashicons-yes"></span>' . __( 'Add a Pinterest button that appears when users hover your in-post images.', 'social-pug' ) . '</p>';
+
+				echo '<p><span class="dashicons dashicons-yes"></span>' . __( "Recover your social share counts if you've moved your website from http to https.", 'social-pug' ) . '</p>';
+
+				echo '<p><span class="dashicons dashicons-yes"></span>' . __( 'Get immediate help with priority support.', 'social-pug' ) . '</p>';
+
+				echo '<p><span class="dashicons dashicons-yes"></span>' . __( 'And much, much more...', 'social-pug' ) . '</p>';
+
+				echo '<a id="dpsp-to-premium" href="https://devpups.com/social-pug/features/?utm_source=plugin&amp;utm_medium=sidebar&amp;utm_campaign=social-pug" target="_blank">' . __( 'Upgrade to Pro', 'social-pug' ) . '</a>';
 
 			echo '</div>';
 

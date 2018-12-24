@@ -63,7 +63,21 @@
 	 */
 	function dpsp_output_front_end_content( $content ) {
 
-		if( !dpsp_is_location_displayable( 'content' ) )
+		// Make sure the_content isn't executed in wp_head
+		global $wp_current_filter;
+
+        if( ! empty( $wp_current_filter ) && is_array( $wp_current_filter ) ) {
+
+            foreach( $wp_current_filter as $filter ) {
+
+                if( $filter == 'wp_head' )
+                    return $content;
+
+            }
+
+        }
+
+		if( ! dpsp_is_location_displayable( 'content' ) )
 			return $content;
 
 		// Get saved settings
@@ -72,8 +86,8 @@
 		// Get the post object
 		global $post;
 
-		if( !$post )
-			return;
+		if( ! $post )
+			return $content;
 
 		if( !isset( $settings['post_type_display'] ) || ( isset( $settings['post_type_display'] ) && !is_singular( $settings['post_type_display'] ) ) )
 			return $content;

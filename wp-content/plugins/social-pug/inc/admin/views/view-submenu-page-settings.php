@@ -20,6 +20,8 @@
 
 				<?php dpsp_settings_field( 'text', 'dpsp_settings[facebook_app_id]', ( isset($dpsp_settings['facebook_app_id']) ? $dpsp_settings['facebook_app_id'] : '' ), __( 'Facebook App ID', 'social-pug' ), '' ); ?>
 				<?php dpsp_settings_field( 'text', 'dpsp_settings[facebook_app_secret]', ( isset($dpsp_settings['facebook_app_secret']) ? $dpsp_settings['facebook_app_secret'] : '' ), __( 'Facebook App Secret', 'social-pug' ), '' ); ?>
+				<?php dpsp_settings_field( 'text', 'dpsp_settings[twitter_username]', ( isset($dpsp_settings['twitter_username']) ? $dpsp_settings['twitter_username'] : '' ), __( 'Twitter Username', 'social-pug' ), '' ); ?>
+				<?php dpsp_settings_field( 'checkbox', 'dpsp_settings[tweets_have_username]', ( isset( $dpsp_settings['tweets_have_username']) ? $dpsp_settings['tweets_have_username'] : '' ), __( 'Add Twitter Username to all tweets', 'social-pug' ), array('yes') ); ?>
 
 			</div>
 
