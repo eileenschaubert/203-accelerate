@@ -30,7 +30,7 @@
 				<h3 class="dpsp-section-title"><?php _e( 'Misc', 'social-pug' ); ?></h3>
 
 				<?php dpsp_settings_field( 'checkbox', 'dpsp_settings[disable_meta_tags]', ( isset($dpsp_settings['disable_meta_tags']) ? $dpsp_settings['disable_meta_tags'] : '' ), __( 'Disable Open Graph Meta Tags', 'social-pug' ), array('yes') ); ?>
-				<?php dpsp_settings_field( 'checkbox', 'dpsp_settings[twitter_share_counts]', ( isset($dpsp_settings['twitter_share_counts']) ? $dpsp_settings['twitter_share_counts'] : '' ), __( 'Enable Twitter Tweet Counts', 'social-pug' ), array('yes'), sprintf( __( 'We have partenered with %1$sOpenShareCount%2$s to bring back Twitter Share Counts. You will need to register your website on %1$stheir website%2$s in order for Social Pug to be able to return the share counts.', 'social-pug' ), '<a href="http://opensharecount.com/" target="_blank">', '</a>' ) ); ?>
+				<?php dpsp_settings_field( 'checkbox', 'dpsp_settings[twitter_share_counts]', ( isset($dpsp_settings['twitter_share_counts']) ? $dpsp_settings['twitter_share_counts'] : '' ), __( 'Enable Twitter Tweet Counts', 'social-pug' ), array('yes'), sprintf( __( 'You will need to register your website on %1$sTwitCount%2$s in order for Social Pug to be able to return the share counts.', 'social-pug' ), '<a href="http://twitcount.com/" target="_blank">', '</a>' ) ); ?>
 				
 			</div>
 

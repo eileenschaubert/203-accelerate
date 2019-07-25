@@ -618,17 +618,17 @@
 
 
 	/**
-	 * Add admin notice to anounce the removal of NewShareCounts and the addition of OpenShareCount
+	 * Add admin notice to anounce that OpenShareCount doesn't work properly anymore and to switch to TwitCount
 	 *
 	 */
-	function dpsp_admin_notice_opensharecount() {
+	function dpsp_admin_notice_opensharecount_not_working() {
 
 		// Do not display this notice if user cannot activate plugins
 		if( ! current_user_can( 'activate_plugins' ) )
 			return;
 
 		// Do not display this notice for users that have dismissed it
-		if( get_user_meta( get_current_user_id(), 'dpsp_admin_notice_opensharecount', true ) != '' )
+		if( get_user_meta( get_current_user_id(), 'dpsp_admin_notice_opensharecount_not_working', true ) != '' )
 			return;
 
 		// Echo the admin notice
@@ -636,16 +636,20 @@
 
 			echo '<h4>' . __( 'Social Pug Important Notification', 'social-pug' ) . '</h4>';
 
-        	echo '<p>' . __( 'NewShareCounts, the third party Twitter share counts platform we have partnered a while ago to bring back tweet counts, has unfortunately closed.', 'social-pug' ) . '</p>';
+        	echo '<p>' . __( 'OpenShareCount, the third party Twitter share counts platform that replaced the old third party platform, NewShareCounts, seems to have also shut down.', 'social-pug' ) . '</p>';
 
-        	echo '<p>' . sprintf( __( 'To help save your Twitter share counts, we have integrated Social Pug with another third party option, namely OpenShareCount. If you were using NewShareCounts and wish to take advantage of the new integration you will have to register your website with OpenShareCount. %sTo do this click here%s.', 'social-pug' ), '<a href="http://opensharecount.com/" target="_blank">', '</a>' ) . '</p>';
+        	echo '<p>' . sprintf( __( 'If you have seen very high loading times for your posts and pages, this might be the cause. We strongly recommend you to create an account with %sTwitCount%s if you wish to continue having tweet counts.', 'social-pug' ), '<a href="http://twitcount.com/" target="_blank">', '</a>' ) . '</p>';
 
-        	echo '<p><a href="' . add_query_arg( array( 'dpsp_admin_notice_opensharecount' => 1 ) ) . '">' . __( 'Thank you, I understand.', 'social-pug' ) . '</a></p>';
+        	echo '<p>' . sprintf( __( "Because of the high loading times OpenShareCount caused, we have automatically deactivated Social Pug's tweet counts system if you were using OpenShareCount. You can reactivate it from the %sSettings page%s.", 'social-pug' ), '<a href="' . add_query_arg( array( 'page' => 'dpsp-settings' ), admin_url( 'admin.php' ) ) . '">', '</a>' ) . '</p>';
+
+        	echo '<p>' . __( "We are very sorry for this inconvenience, but there's nothing much we can do about it. Given that Twitter does not provide access to tweet counts, third party integrations are the only solution. Unfortunately, it seems that keeping track for so many tweets is quite a challenge.", 'social-pug' ) . '</p>';
+
+        	echo '<p><a href="' . add_query_arg( array( 'dpsp_admin_notice_opensharecount_not_working' => 1 ) ) . '">' . __( 'Thank you, I understand.', 'social-pug' ) . '</a></p>';
 
         echo '</div>';
 
 	}
-	add_action( 'admin_notices', 'dpsp_admin_notice_opensharecount' );
+	add_action( 'admin_notices', 'dpsp_admin_notice_opensharecount_not_working' );
 
 
 	/**
@@ -705,8 +709,8 @@
 		if( isset( $_GET['dpsp_admin_notice_promo_opt_in_hound'] ) )
 			add_user_meta( get_current_user_id(), 'dpsp_admin_notice_promo_opt_in_hound', 1, true );
 
-		if( isset( $_GET['dpsp_admin_notice_opensharecount'] ) )
-			add_user_meta( get_current_user_id(), 'dpsp_admin_notice_opensharecount', 1, true );
+		if( isset( $_GET['dpsp_admin_notice_opensharecount_not_working'] ) )
+			add_user_meta( get_current_user_id(), 'dpsp_admin_notice_opensharecount_not_working', 1, true );
 
 	}
 	add_action( 'admin_init', 'dpsp_admin_notice_dismiss' );
